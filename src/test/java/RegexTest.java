@@ -1,29 +1,26 @@
-
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+public class RegexTest {
 
-public class Validations {
-    public boolean isDateFormatValid(String dateToValidate, String dateFormat) {
-        String parseDateExceptionError = "Incorrect format, please use dd/MMM/yy, ex. 12/Oct/09";
 
-        if (dateToValidate == null) {
-            return false;
-        }
-        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
-        sdf.setLenient(false);
+   /* public static void main(String[] args) {
+        String text =
+                "This is the text to be searched " +
+                        "for occurrences of the pattern.";
 
-        try {
-            sdf.parse(dateToValidate);
-        } catch (ParseException e) {
-            System.out.println(parseDateExceptionError);
-            return false;
-        }
-        return true;
-    }
+        String patternString = ".*http://.*";
+
+        Pattern pattern = Pattern.compile(patternString);
+        Matcher matcher = pattern.matcher(text);
+
+        boolean matches = matcher.matches();
+
+        if (matches == true) {
+            System.out.println("Found a match!");
+        } else System.out.println("No matches found!");
+    }*/
 
     public static void main(String[] args) {
         System.out.println("How many hours are you logging? Ex. 5h 30m");
@@ -33,7 +30,7 @@ public class Validations {
         boolean matches = isHourFormatCorrect(text);
 
         if (matches) {
-            System.out.println("Correct format!");
+                System.out.println("Correct format!");
         } else System.out.println("Incorrect format!");
     }
 
@@ -52,4 +49,3 @@ public class Validations {
         return matches1 || matches2;
     }
 }
-
