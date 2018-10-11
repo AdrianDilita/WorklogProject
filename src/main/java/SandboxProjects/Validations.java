@@ -53,7 +53,7 @@ public class Validations {
         if (matches1 || matches2) {
             return matches1 || matches2;
         } else {
-            System.out.println("Incorrect format, please use either Hh or Hh MMm format! Ex. 9h or 5h 30m");
+            System.out.println("Incorrect format, please use either Hh or Hh MMm format!");
             return false;
         }
     }
