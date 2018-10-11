@@ -1,10 +1,13 @@
+import org.junit.Test;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//these are test classes
 public class RegexTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void atest() {
         System.out.println("How many hours are you logging? Ex. 5h 30m");
         Scanner hourScan = new Scanner(System.in);
         String text = hourScan.nextLine();
