@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 ### IntelliJ IDEA ###
 *.idea
 **.iws
 **.iml
+=======
+### IntelliJ IDEA ###
+*.idea
+**.iws
+**.iml
+>>>>>>> 125b9112b33b38e5031234120467a0330b646e95
 **.ipr
