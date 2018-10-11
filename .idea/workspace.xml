@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48168b8-11b1-4339-85f0-1c695005e8fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/SandboxProjects/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SandboxProjects/Validations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegexTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Validations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WorkLogProject.class" beforeDir="false" />
-    </list>
+    <list default="true" id="a48168b8-11b1-4339-85f0-1c695005e8fa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,12 +62,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2174" />
+          <entry key="java" value="2256" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2174" />
+          <entry key="JAVA" value="2256" />
         </counts>
       </usages-collector>
     </session>
@@ -95,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="646">
+              <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,9 +151,9 @@
         <option value="$PROJECT_DIR$/src/test/java/WorkLogProject.java" />
         <option value="$PROJECT_DIR$/src/test/java/Validations.java" />
         <option value="$PROJECT_DIR$/src/main/java/WorkLogProject/WorkLogProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/SandboxProjects/Validations.java" />
         <option value="$PROJECT_DIR$/src/test/java/RegexTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java" />
       </list>
     </option>
   </component>
@@ -253,7 +247,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539245306237" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539245878013" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -323,23 +317,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-1208" width="1936" height="1176" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17803837" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.17803837" />
+      <window_info id="Structure" order="1" sideWeight="0.5015244" side_tool="true" weight="0.17803837" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5015244" side_tool="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32917467" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.37044147" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" visible="true" weight="0.37044147" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32917467" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.37044147" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32917467" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.37044147" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32917467" />
@@ -351,7 +355,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.17643923" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.17643923" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -451,8 +455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SandboxProjects/WorkLogProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="646">
+          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

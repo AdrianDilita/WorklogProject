@@ -38,8 +38,8 @@ public class Validations {
     }*/
 
     public boolean isHourFormatValid(String hourToValidate) {
-        String patternHourString = "\\d" + "h";
-        String patternHourMinuteString = "\\d" + "h " + "\\d+" + "m";
+        String patternHourString = "\\d+" + "h";
+        String patternHourMinuteString = "\\d+" + "h " + "\\d+" + "m";
 
         Pattern pattern = Pattern.compile(patternHourMinuteString);
         Pattern pattern2 = Pattern.compile(patternHourString);
