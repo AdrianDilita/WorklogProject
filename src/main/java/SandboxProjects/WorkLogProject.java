@@ -6,21 +6,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.Keys;
+
+import javax.management.Notification;
 import java.util.Scanner;
+
+import static SandboxProjects.NotificationMessages.DATE_CONFIRMATION_MESSAGE;
 
 public class WorkLogProject {
     public static void main(String[] args) {
-        String dateFormat = "dd/MMM/yy";
         boolean isItComplete = false;
 
-        System.out.println("On what date are you logging time? Ex. 12/Oct/18");
-        Scanner dateScan = new Scanner(System.in);
+        System.out.println(NotificationMessages.DATE_CONFIRMATION_MESSAGE);
+        UserInputs.requestUserInputDate();
 
-        while (!dateScan.toString().equals("")) {
-            String dateToValidate = dateScan.nextLine();
+        while (!UserInputs.requestUserInputDate().equals("")) {
+
+            String dateToValidate = UserInputs.requestUserInputDate();
             Validations dateValidator = new Validations();
 
-            while ((dateValidator.isDateFormatValid(dateToValidate, dateFormat)) && (!isItComplete)) {
+            while ((dateValidator.isDateFormatValid(dateToValidate)) && (!isItComplete)) {
                 System.out.println("How many hours are you logging? Ex. 5h 30m");
                 Scanner hourScan = new Scanner(System.in);
 
@@ -56,7 +60,7 @@ public class WorkLogProject {
                         timeSpent.click();
                         timeSpent.sendKeys(hourToValidate);
                         timeSpent.sendKeys(Keys.RETURN);
-                        System.out.println("Work log successfully added!");
+                        System.out.println(NotificationMessages.WORK_LOG_SUCCESSFUL_MESSAGE);
                         isItComplete = true;
                     } else {
                         WebElement dateStarted = driver.findElement(By.xpath("//*[@id='log-work-date-logged-date-picker']"));
@@ -68,14 +72,14 @@ public class WorkLogProject {
                         timeSpent.click();
                         timeSpent.sendKeys(hourToValidate);
                         timeSpent.sendKeys(Keys.RETURN);
-                        System.out.println("Work log successfully added for different day!");
+                        System.out.println(NotificationMessages.WORK_LOG_DIFF_DAY_SUCCESSFUL_MESSAGE);
                         isItComplete = true;
                     }
-                    System.out.println("Runnable will now close");
+                    System.out.println(NotificationMessages.CLOSING_NOTIFICATION_MESSAGE);
                     System.exit(0);
                 }
             }
-            dateScan = new Scanner(System.in);
+            //dateScan = new Scanner(System.in); //removed for debug
         }
     }
 }

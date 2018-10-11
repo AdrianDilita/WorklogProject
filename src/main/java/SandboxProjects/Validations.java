@@ -7,7 +7,8 @@ import java.util.regex.Pattern;
 
 
 public class Validations {
-    public boolean isDateFormatValid(String dateToValidate, String dateFormat) {
+    public boolean isDateFormatValid(String dateToValidate) {
+        String dateFormat = "dd/MMM/yy";
         String parseDateExceptionError = "Incorrect format, please use dd/MMM/yy, ex. 12/Oct/09";
 
         if (dateToValidate == null) {
