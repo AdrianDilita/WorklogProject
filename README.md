@@ -9,7 +9,7 @@ Validation for date format - DONE
 
 Validation for hour format - DONE
 
-Move all variables at beginning of class - TO DO
+Move all variables at beginning of class - DONE
 
 Allow selection of Jira ID - TO DO
 
