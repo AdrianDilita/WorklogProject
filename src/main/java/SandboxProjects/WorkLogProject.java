@@ -7,28 +7,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.Keys;
 
-import javax.management.Notification;
-import java.util.Scanner;
-
-import static SandboxProjects.NotificationMessages.DATE_CONFIRMATION_MESSAGE;
 
 public class WorkLogProject {
     public static void main(String[] args) {
         boolean isItComplete = false;
 
         System.out.println(NotificationMessages.DATE_CONFIRMATION_MESSAGE);
-        UserInputs.requestUserInputDate();
+        String dateString = UserInputs.requestUserInputDate();
 
-        while (!UserInputs.requestUserInputDate().equals("")) {
-
-            String dateToValidate = UserInputs.requestUserInputDate();
+        while (!dateString.equals("")) {
             Validations dateValidator = new Validations();
 
-            while ((dateValidator.isDateFormatValid(dateToValidate)) && (!isItComplete)) {
-                System.out.println("How many hours are you logging? Ex. 5h 30m");
-                Scanner hourScan = new Scanner(System.in);
+            while ((dateValidator.isDateFormatValid(dateString)) && (!isItComplete)) {
+                System.out.println(NotificationMessages.HOUR_CONFIRMATION_MESSAGE);
+                String hourToValidate = UserInputs.requestUserInputHours();
 
-                String hourToValidate = hourScan.nextLine();
                 Validations hourValidator = new Validations();
 
                 while ((hourValidator.isHourFormatValid(hourToValidate)) && (!isItComplete)) {
@@ -55,7 +48,7 @@ public class WorkLogProject {
                     String dateTime = driver.findElement(By.xpath("//*[@id=\'log-work-date-logged-date-picker\']")).getAttribute("value");
                     String dateValue = dateTime.substring(0, 9);
 
-                    if (dateValue.equals(dateToValidate)) {
+                    if (dateValue.equals(UserInputs.requestUserInputDate())) {
                         WebElement timeSpent = driver.findElement(By.xpath("//*[@id='log-work-time-logged']"));
                         timeSpent.click();
                         timeSpent.sendKeys(hourToValidate);
@@ -67,7 +60,7 @@ public class WorkLogProject {
                         dateStarted.click();
                         dateStarted.sendKeys(Keys.chord(Keys.CONTROL, "a"));
                         dateStarted.sendKeys(Keys.BACK_SPACE);
-                        dateStarted.sendKeys(dateToValidate + " 1:00 PM");
+                        dateStarted.sendKeys(UserInputs.requestUserInputDate() + " 1:00 PM");
                         WebElement timeSpent = driver.findElement(By.xpath("//*[@id='log-work-time-logged']"));
                         timeSpent.click();
                         timeSpent.sendKeys(hourToValidate);
@@ -79,7 +72,7 @@ public class WorkLogProject {
                     System.exit(0);
                 }
             }
-            //dateScan = new Scanner(System.in); //removed for debug
+            dateString = UserInputs.requestUserInputDate(); //removed for debug
         }
     }
 }

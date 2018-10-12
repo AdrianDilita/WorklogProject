@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class Validations {
     public boolean isDateFormatValid(String dateToValidate) {
         String dateFormat = "dd/MMM/yy";
-        String parseDateExceptionError = "Incorrect format, please use dd/MMM/yy, ex. 12/Oct/09";
+        String parseDateExceptionError = NotificationMessages.INCORRECT_DATE_FORMAT_MESSAGE;
 
         if (dateToValidate == null) {
             return false;
@@ -25,18 +25,6 @@ public class Validations {
         }
         return true;
     }
-
-   /* public static void main(String[] args) {
-        System.out.println("How many hours are you logging? Ex. 5h 30m");
-        Scanner hourScan = new Scanner(System.in);
-        String text = hourScan.nextLine();
-
-        boolean matches = isHourFormatValid(text);
-
-        if (matches) {
-            System.out.println("Correct format!");
-        } else System.out.println("Incorrect format!");
-    }*/
 
     public boolean isHourFormatValid(String hourToValidate) {
         String patternHourString = "\\d+" + "h";
@@ -54,7 +42,7 @@ public class Validations {
         if (matches1 || matches2) {
             return matches1 || matches2;
         } else {
-            System.out.println("Incorrect format, please use either Hh or Hh MMm format!");
+            System.out.println(NotificationMessages.INCORRECT_HOUR_FORMAT_MESSAGE);
             return false;
         }
     }
