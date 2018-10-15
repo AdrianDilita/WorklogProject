@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 public class Validations {
     public boolean isDateFormatValid(String dateToValidate) {
         String dateFormat = "dd/MMM/yy";
-        String parseDateExceptionError = NotificationMessages.INCORRECT_DATE_FORMAT_MESSAGE;
 
         if (dateToValidate == null) {
             return false;
@@ -25,7 +24,7 @@ public class Validations {
         try {
             sdf.parse(dateToValidate);
         } catch (ParseException e) {
-            System.out.println(parseDateExceptionError);
+            System.out.println(NotificationMessages.INCORRECT_DATE_FORMAT_MESSAGE);
             return false;
         }
         return true;
@@ -46,10 +45,9 @@ public class Validations {
 
         if (matches1 || matches2) {
             return matches1 || matches2;
-        } else {
+        } else
             System.out.println(NotificationMessages.INCORRECT_HOUR_FORMAT_MESSAGE);
             return false;
-        }
     }
 
     public static String jiraDateCheck(FirefoxDriver driver) {
