@@ -1,5 +1,10 @@
 package SandboxProjects;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.regex.Matcher;
@@ -45,6 +50,15 @@ public class Validations {
             System.out.println(NotificationMessages.INCORRECT_HOUR_FORMAT_MESSAGE);
             return false;
         }
+    }
+
+    public static String jiraDateCheck(FirefoxDriver driver) {
+        WebDriverWait wait20 = new WebDriverWait(driver, 20);
+
+        wait20.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@id=\'log-work-date-logged-date-picker\']"))));
+        String dateTime = driver.findElement(By.xpath("//*[@id=\'log-work-date-logged-date-picker\']")).getAttribute("value");
+        String dateValue = dateTime.substring(0, 9);
+        return dateValue;
     }
 }
 
