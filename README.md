@@ -13,5 +13,4 @@ Move all variables at beginning of class - DONE
 
 Allow selection of Jira ID - TO DO
 
-Implement into bookmarklet - TO DO
 
