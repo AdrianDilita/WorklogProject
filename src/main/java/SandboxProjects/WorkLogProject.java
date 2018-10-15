@@ -17,7 +17,7 @@ public class WorkLogProject {
                 String hourToValidate = UserInputs.requestUserInputHours();
                 Validations hourValidator = new Validations();
 
-                while ((hourValidator.isHourFormatValid(hourToValidate)) && (!isItComplete)) {
+                if (hourValidator.isHourFormatValid(hourToValidate)) {
                     FirefoxDriver driver = new FirefoxDriver();
                     BrowserActions.userLogin(driver);
                     Validations.jiraDateCheck(driver);

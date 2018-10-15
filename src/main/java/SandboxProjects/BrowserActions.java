@@ -12,16 +12,16 @@ public class BrowserActions {
         WebDriverWait wait5 = new WebDriverWait(driver, 5);
         WebDriverWait wait20 = new WebDriverWait(driver, 20);
 
-        driver.get(userInfo.jiraInfo()); //TODO add user defined JIRA ID to add worklog to
+        driver.get(UserInfo.jiraInfo()); //TODO add user defined JIRA ID to add worklog to
         WebElement username = driver.findElement(By.xpath("//*[@id='username']"));
         username.click();
-        username.sendKeys(userInfo.usernameInfo());
+        username.sendKeys(UserInfo.usernameInfo());
         username.sendKeys(Keys.RETURN);
 
         wait5.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
         WebElement password = driver.findElement(By.xpath(("//*[@id='password']")));
         password.click();
-        password.sendKeys(userInfo.passwordInfo());
+        password.sendKeys(UserInfo.passwordInfo());
         password.sendKeys(Keys.RETURN);
 
         wait20.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"log-work-link\"]")));

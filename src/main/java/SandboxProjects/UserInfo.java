@@ -1,6 +1,6 @@
 package SandboxProjects;
 
-public class userInfo {
+public class UserInfo {
     public static String usernameInfo() {
         return "adrian.dilita@mindit.io";
     }
